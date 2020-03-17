@@ -1,0 +1,99 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<body>
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand" href="#">BK Autoasist</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ml-3">
+      <li class="nav-item active mr-2">
+        <a class="nav-link" href="">Domů<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="#">Odtahová služba</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="#">Přeprava strojů</a>
+      </li>
+      <li class="nav-item mr-2">
+        <a class="nav-link" href="#">Autoservis</a>
+      </li>
+      <li class="nav-item dropdown mr-2 ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Fotogalerie
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Naše technika</a>
+          <a class="dropdown-item" href="#">Vyprošťovací zásahy</a>
+          <a class="dropdown-item" href="#">Přeprava strojů</a>
+          <a class="dropdown-item" href="#">Autoservis</a>
+      </li>
+         <li class="nav-item mr-2">
+        <a class="nav-link" href="/kontakt">Kontakty</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+       <h5 class="text-light">
+               Tel:
+           </h5>
+      <li class="ml-3 "><a class="text-light" href="#">+420 773 689 610</a></li>           
+      <li class="ml-3"><a class="text-light" href="#">+420 608 800 828</a></li>
+    </ul>
+  </div>
+  
+</nav>
+<div class="jumbotron jumbotron-fluid mask flex-center">
+
+  <div class="container">
+    <h1 class="display-4">BK Autoasist s.r.o</h1>
+    <p class="lead">Naše společnost se zabývá poskytováním odtahové a silniční služby široké motoristické veřejnosti.</p>
+     <p class="lead">Disponujeme jedním vyprošťovacím a šesti odtahovými speciály, a jedním asistenčním vozem. Vozy jsou vybavené technikou umožňující odtah od motocyklu po nákladní vozidlo. 
+Umíme vyprostit tahač i s návěsem nebo celou soupravu. Drobné poruchy řeší naši technici přímo na místě. Naše speciály jsou vám k dispozici 24 hodin denně.</p>
+</div>
+</div>
+<div class="pap ml-5 mt-5 sluzby mb-5 text-white">
+<h3 class="ml-5 mb-4">Mezi naše služby patří</h3>
+<ul class="ml-4">
+<li class="mb-2">Odtah porouchaných a havarovaných vozidel včetně vyproštění</li>
+<li class="mb-2">Přeprava strojů a zařízení až do hmotnosti 14 tun</li>
+<li class="mb-2">Autoservis a pneuservis</li>
+<li class="mb-2">Odstavné parkoviště</li>
+</ul>
+</div>
+
+
+<div class="news text-white ">
+<h2 class="ml-5 mt-5">Novinky</h2>
+  <div class=" mt-3 left ml-5">
+      {% for Novinky in object_list %}
+          <h2 class="mt-5" >{{ Novinky.nazev }}</h2>
+          <h6 class="datum">
+            {{ Novinky.vytvoreno }}
+          </h6>
+
+      <p class="mt-5">{{ Novinky.obsah }}</p>
+{% if Novinky.foto %}
+    <img class="mt-3 foto rounded img-fluid" src="{{ Novinky.foto.url }}" class="img-responsive">
+{% endif %}
+{% if Novinky.foto2 %}
+    <img class="mt-4 foto rounded img-fluid" src="{{ Novinky.foto2.url }}" class="img-responsive">
+{% endif %}
+{% if Novinky.foto3 %}
+    <img class="mt-4 foto rounded img-fluid" src="{{ Novinky.foto3.url }}" class="img-responsive">
+{% endif %}
+
+
+
+
+
+      {% endfor %}
+        </div>
+<div>
+
+
+</body>
+{% endblock %}
