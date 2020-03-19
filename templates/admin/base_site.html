@@ -1,0 +1,41 @@
+
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | Bk autoasist admin{% endblock %}
+
+{% block extrastyle %}
+
+<style>
+    body{
+    background-image: url(../../static/fot/bg.jpg);
+    }
+    #header{
+    background-color:#676767;
+    }
+    .module caption{
+    background-color: #9e9e9e;
+    
+    }
+    .model-group{
+    color: #424242;
+    
+    }
+    #content h1{
+    color: white;
+    }
+    .breadcrumbs{
+     background-color: #9e9e9e;
+    }
+
+    
+    
+
+</style>
+
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">BK autoasist admin</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

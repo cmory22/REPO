@@ -25,7 +25,7 @@ SECRET_KEY = 'l&$mzh%7vp*baatz&d#h+3b$7u$4c1-s+yv74y%qd0w3y^qmbu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cmory.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition

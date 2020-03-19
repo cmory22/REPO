@@ -11,16 +11,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ml-3">
       <li class="nav-item  mr-2">
-        <a class="nav-link" href="../">Domů</a>
+        <a class="nav-link js" href="../">Domů</a>
       </li>
       <li class="nav-item mr-2">
-        <a class="nav-link" href="#">Odtahová služba</a>
+        <a class="nav-link js" href="/odtah">Odtahová služba</a>
       </li>
       <li class="nav-item mr-2">
-        <a class="nav-link" href="#">Přeprava strojů</a>
+        <a class="nav-link js" href="/preprava">Přeprava strojů</a>
       </li>
       <li class="nav-item mr-2">
-        <a class="nav-link" href="#">Autoservis</a>
+        <a class="nav-link js" href="/autoservis">Autoservis</a>
       </li>
       <li class="nav-item dropdown mr-2 ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -49,22 +49,46 @@
 
 
 
-<div>
 
-    <h2 class="text-white mt-5 ml-5 display-3">Kontakty</h2>
-    <div class="mt-5 ml-5">
-    <div class=""><b class="display-4">Vojtěch Bém:</b> <a class="display-4 text-white" href="tel:+420773689610">+420 773 689 610</a><br></div>
-    <div class="mt-3"><b class="display-4">Norbert Kovács:</b> <a class="display-4 text-white" href="tel:+420608800828">+420 608 800 828</a><br> </div>
-    <div class="mt-5"><a class="display-4 text-white" href="mailto:info@bkautoasist.cz">info@bkautoasist.cz</a></div>
-    </div>
 
-</div>
+<div class=" text-white prepav odtah kontakty">
+<h1 class="mb-5 ml-5 novinka">Kontakty</h1>
+<H2 class="ml-5"><b class="">Vojtěch Bém:</b> <a class=" text-white" href="tel:+420773689610">+420 773 689 610</a><br></h2>
+    <H2 class="mt-3 ml-5"><b class="">Norbert Kovács:</b> <a class=" text-white" href="tel:+420608800828">+420 608 800 828</a><br> </H2>
+    <H2 class="mt-5 ml-5"><a class=" text-white" href="mailto:info@bkautoasist.cz">info@bkautoasist.cz</a></H2>
+    <H2 class="mt-5 ml-5"><a class=" text-white" href="https://www.facebook.com/BKautoasistsro/">Náš facebook</a></H2>
 
-<div>
-     <span>Sídlo firmy</span>
+
 
 </div>
+<div class="container-fluid text-center text-md-left text-white kont">
+<div class="row">
+<div class="col-md-6 mt-md-0 mt-3">
+<h2 class="mb-3 ml-5 mt-5 novinka">Sídlo firmy</h2>
+<p class="ml-5 adresa">
+ BK autoasist s.r.o.<br>
+ Petřvaldská 610<br>
+ Rychvald 735 32
+</p>
+<div class="mapouter ml-5"><div class="gmap_canvas"><iframe width="482" height="382" id="gmap_canvas" src="https://maps.google.com/maps?q=BK%20autosist%20s.r.o.%20Pet%C5%99valdsk%C3%A1%20610%20Rychvald%20735%2032&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:382px;width:482px;}.gmap_canvas {overflow:hidden;background:none!important;height:382px;width:482px;}</style></div>
+</div>
 
 
+<div class="col-md-4 mb-md-0 mb-3 ml-5 text-white">
+<h2 class="mb-3 ml-5 mt-5 novinka">Pobočka a autoservis</h2>
+<p class="ml-5 adresa">
+ BK autoasist s.r.o.<br>
+ Na Kopci 165/7<br>
+ Havířov 735 64
+</p>
+<div class="mapouter ml-5"><div class="gmap_canvas"><iframe width="482" height="382" id="gmap_canvas" src="https://maps.google.com/maps?q=%20Na%20Kopci%20165%2F7%20%20Hav%C3%AD%C5%99ov%20735%2064&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:382px;width:482px;}.gmap_canvas {overflow:hidden;background:none!important;height:382px;width:482px;}</style></div>
+</div>
+</div>
+</div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js" integrity="sha256-6EA3edRalZC0PA7PmE6+Eedf0pgmMNZYOQpgAaZ2h3A=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="{% static 'js/java.js' %}"></script>
 </body>
 {% endblock %}
